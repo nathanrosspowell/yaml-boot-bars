@@ -186,6 +186,23 @@ section {
   padding-top:100px;
 }
 
+.bg-cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.bg-1 {
+    background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .bg-1 {
 	background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
