@@ -1,0 +1,1 @@
+/*! yaml-boot-bars - v0.0.1 - 2014-06-13 */$("#nav").affix({offset:{top:$("header").height()-$("#nav").height()}}),$("body").scrollspy({target:"#nav"}),$(".scroll-top").click(function(){$("body,html").animate({scrollTop:0},1e3)}),$("#nav .navbar-nav li>a").click(function(){var a=$(this).attr("href"),b=$(a).offset().top+20;$("body,html").animate({scrollTop:b},700)});
