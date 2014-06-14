@@ -57,7 +57,7 @@ h1,h2,h3,h4 {
 }
 
 header {
-  background: #f16251;
+  background: #5cb85c;
   height:550px;
   color:#000000;
 }
@@ -70,7 +70,7 @@ header h1,header h2,header h3 a,header a,header a:hover {
 
 header h3 {
   font-family: 'Kreon', serif;
-  background: #ffcc33;
+  background: #df691a;
   padding:10px;
   border-radius:3px;
   font-size:34px;
@@ -79,7 +79,7 @@ header h3 {
 
 header .dropdown-menu {
   top:74px;
-  background: #ffcc33;
+  background: #df691a;
   border-width:0;
 }
 
@@ -168,7 +168,7 @@ h1 {
    bottom:0;
    right:6%;
    z-index:100;
-   background: #ffcc33;
+   background: #df691a;
    font-size:24px;
    border-top-left-radius:3px;
    border-top-right-radius:3px;
