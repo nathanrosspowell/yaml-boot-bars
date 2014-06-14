@@ -1,107 +1,163 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <meta name="description" content="">
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>YAML-Boot-Bars</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
+  <head>
+    <meta name="description" content="">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>YAML-Boot-Bars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/boilerplate.css">
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
-    <body>
-<!-- Wrap all page content here -->
-<div id="wrap">
-  
-<header class="masthead">
-    <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1><a href="#" title="Bootstrap Template">YAML-boot-bars</a>
-          <p class="lead">YAML powered Bootstrap webpage using Handlebars.js</p></h1>
-      </div>
-      <div class="col-sm-6">
-        <div class="pull-right  hidden-xs">    
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
-          <ul class="dropdown-menu">
-              <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-user"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Link</a></li>
-          </ul>
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/boilerplate.css">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <header class="masthead">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <h1><a href="#" title="Bootstrap Template">Happy Scroll</a>
+          <p class="lead">{A Bootstrap Template}</p></h1>
+            </div>
+            <div class="col-sm-6">
+              <div class="pull-right  hidden-xs">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Link</a>
+                  </li>
+                  <li><a href="#"><i class="glyphicon glyphicon-user"></i> Link</a>
+                  </li>
+                  <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Link</a>
+                  </li>
+                  <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </header>
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav nav-justified" id="navList">
+              <li><a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#Nike"><strong>Nike</strong></a>
+              </li>
+              <li class="active">
+                <a href="#Loafers"><strong>Loafers</strong></a>
+              </li>
+              <li>
+                <a href="#Wing Tip"><strong>Wing Tip</strong></a>
+              </li>
+              <li>
+                <a href="#Herp Derp"><strong>Herp Derp</strong></a>
+              </li>
+              <li>
+                <a href="#Magic Man"><strong>Magic Man</strong></a>
+              </li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <!--/.container -->
       </div>
-    </div>
-    </div>
-</header>
-  
-  
-<!-- Fixed navbar -->
-<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav nav-justified" id="navList">
-          <li><a href="#">Home</a></li>
-            <script id="navList-template" type="x-handlebars-template">
-                {{#each sections}}
-                    <li {{#if active}}class="active"{{/if}}>
-                        <a href="#{{name}}"><strong>{{name}}</strong></a>
-                    </li>
-                {{/each}}
-            </script>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div><!--/.container -->
-</div><!--/.navbar -->
-    
-<div id="sections">
-    <script id="sections-template" type="x-handlebars-template">
-        {{#each sections}}
-            <div class="divider" id="{{name}}"></div>
-            <section style="
-            background: url('{{background}}') no-repeat center center fixed;
+      <!--/.navbar -->
+      <div id="sections">
+        <div class="divider" id="Nike"></div>
+        <section style="
+            background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;">
-              <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">{{name}}</h2></div>
-      
-            </section>
-            <div class="divider"></div>
-        {{/each}}
-    </script>
-</div>
-
-<ul class="nav pull-right scroll-top">
-  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
-</ul>
-
-    <!-- script references -->
-
-        <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
-        <script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
-        <script src="js/handlebars-v1.3.0.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/the_data.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--script>
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Nike</h2>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <div class="divider" id="Loafers"></div>
+        <section style="
+            background: url('http://www.bootply.com/assets/example/bg_5.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Loafers</h2>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <div class="divider" id="Wing Tip"></div>
+        <section style="
+            background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Wing Tip</h2>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <div class="divider" id="Herp Derp"></div>
+        <section style="
+            background: url('http://www.bootply.com/assets/example/bg_6.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Herp Derp</h2>
+          </div>
+        </section>
+        <div class="divider"></div>
+        <div class="divider" id="Magic Man"></div>
+        <section style="
+            background: url('http://www.bootply.com/assets/example/bg_5.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+          <div class="col-sm-6 col-sm-offset-3 text-center">
+            <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Magic Man</h2>
+          </div>
+        </section>
+        <div class="divider"></div>
+      </div>
+      <ul class="nav pull-right scroll-top">
+        <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+        </li>
+      </ul>
+      <!-- script references -->
+      <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+      <script>
+      window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
+      </script>
+      <script src="js/handlebars-v1.3.0.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/the_data.js"></script>
+      <script src="js/main.js"></script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <!--script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -109,6 +165,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script-->
-
-    </body>
+  </body>
 </html>
