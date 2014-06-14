@@ -23,8 +23,8 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <h1><a href="#" title="Bootstrap Template">YAML-boot-bars</a>
-          <p class="lead">YAML powered Bootstrap webpage using Handlebars.js</p></h1>
+        <h1><a href="#" title="Bootstrap Template">Happy Scroll</a>
+          <p class="lead">{A Bootstrap Template}</p></h1>
       </div>
       <div class="col-sm-6">
         <div class="pull-right  hidden-xs">    
@@ -55,20 +55,20 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav nav-justified" id="navList">
           <li><a href="#">Home</a></li>
-            <script id="navList-template" type="x-handlebars-template">
-                {{#each sections}}
-                    <li {{#if active}}class="active"{{/if}}>
-                        <a href="#{{name}}"><strong>{{name}}</strong></a>
-                    </li>
-                {{/each}}
-            </script>
+          {{#with the_data}}
+            {{#each sections}}
+              <li {{#if active}}class="active"{{/if}}>
+                <a href="#{{name}}"><strong>{{name}}</strong></a>
+              </li>
+            {{/each}}
+          {{/with}}
         </ul>
       </div><!--/.nav-collapse -->
     </div><!--/.container -->
 </div><!--/.navbar -->
     
 <div id="sections">
-    <script id="sections-template" type="x-handlebars-template">
+    {{#with the_data}}
         {{#each sections}}
             <div class="divider" id="{{name}}"></div>
             <section style="
@@ -82,7 +82,7 @@
             </section>
             <div class="divider"></div>
         {{/each}}
-    </script>
+    {{/with}}
 </div>
 
 <ul class="nav pull-right scroll-top">
