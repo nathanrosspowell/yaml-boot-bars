@@ -1,0 +1,31 @@
+{
+  "name": "yaml-boot-bars",
+  "version": "0.0.1",
+  "description": "A YAML, Bootstrap and Handlebars project which is turned into a static deploy for gh-pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathanrosspowell/yaml-boot-bars"
+  },
+  "keywords": [
+    "YAML",
+    "Bootstrap",
+    "Handlebars"
+  ],
+  "author": "Nathan Ross Powell",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://opensource.org/licences/MIT"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "ad547a6870973f8364b9ebc2f6889ad67c1ea4f7",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-gh-pages": "~0.9.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0"
+  }
+}

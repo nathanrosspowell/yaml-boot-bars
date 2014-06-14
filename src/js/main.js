@@ -9,7 +9,7 @@ function applyTemplate(div, script, data) {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // On loaded function.
 $(window).bind("load", function () {
-    applyTemplate(".shoesNav", "shoesNav", theData);
+    //applyTemplate(".shoesNav", "shoesNav", theData);
     applyTemplate("#navList", "navList", theData);
     applyTemplate("#sections", "sections", theData);
 });
