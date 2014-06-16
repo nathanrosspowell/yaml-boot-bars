@@ -6,14 +6,14 @@
         <meta charset="utf-8">
         <title>{{project.title}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/boilerplate.css">
-        <link href="css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/boilerplate.css">
+        <link href="../css/styles.css" rel="stylesheet">
     </head>
     <body>
         <!-- Wrap all page content here -->
@@ -31,7 +31,7 @@
                     <div class="carousel-inner">
                         {{#each products}}
                         <div {{#if active }} class="item active" {{else}} class="item" {{/if}}>
-                            <img src="{{carousel}}">
+                            <img src="../{{carousel}}">
                             <div class="container">
                                 <div class="carousel-caption">
                                     <h2>
@@ -89,7 +89,7 @@
                 {{#each products}}
                 <div class="divider" id="{{@key}}"></div>
                 <section style="
-            background: url('{{background}}') no-repeat center center fixed;
+            background: url('../{{background}}') no-repeat center center fixed;
             -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -128,12 +128,12 @@
             <!-- script references -->
             <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
             <script>
-            window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
+            window.jQuery || document.write('<script src="../js/jquery-2.1.1.min.js"><\/script>')
             </script>
-            <script src="js/handlebars-v1.3.0.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/scripts.js"></script>
-            <script src="js/main.js"></script>
+            <script src="../js/handlebars-v1.3.0.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/scripts.js"></script>
+            <script src="../js/main.js"></script>
             {{#if project.googleanalytics }}
             <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
             <!--script>
