@@ -35,9 +35,14 @@ Productivity
 The command to convert the source into the final website has been set up as the default grunt task.
 Inside of the project folder you can simply execute `grunt` then open the file `build/index.html`.
 
-Publishing to the web means moving everything from the `build/` folder into the `gh-pages` branch of the project.
+Publishing to the web means moving everything from the `build/` folder into the [`gh-pages`](https://github.com/nathanrosspowell/yaml-boot-bars/tree/gh-pages) branch of the project.
 The package [`grunt-gh-pages`](https://github.com/tschaub/grunt-gh-pages) has been set up to do this task.
 Running `grunt gh-pages` will move these files across. The command `grunt deploy` does the whole workflow.
+
+YAML
+----
+
+The `scr/yaml/` folder holds all of the [YAML](http://www.yaml.org/) files. In the process of the command `grunt make-yaml` they are all joined together in one [JSON](http://json.org/) file which uses the YAML file name as a key and it's contence as the value. This JSON file is passed into the all the Handlebar templates.
 
 
 Bootstrap Playground
