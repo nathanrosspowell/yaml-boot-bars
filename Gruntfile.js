@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     cwd: "src/",
                     src: [
                         '**/*', // The full source tree, but...
-                        '!**/index.handlebars', // ignore this,
+                        '!**/*.handlebars', // ignore handlebar files,
                         '!**/js/main.js', // ignore this,
                         '!**/js/scripts.js', // ignore this,
                         '!**/yaml/*', // and ignore this folder.
@@ -100,9 +100,9 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         'compile-handlebars': {
             ybb: {
-                template: 'src/index.handlebars',
+                template: 'src/**/*.handlebars',
                 templateData: 'temp/built.json',
-                output: 'build/index.html'
+                output: 'build/**/*index.html'
             }
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
                     json: ['temp/built.json']
                 },
                 files: {
-                    'build/index.html': 'build/index.html'
+                    'build/**/*.html': 'build/**/*.html'
                 }
             }
         },
