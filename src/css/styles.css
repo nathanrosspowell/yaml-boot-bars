@@ -1,11 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
   -webkit-font-smoothing: antialiased;
-  font: normal 14px arial,sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .row {
@@ -27,6 +27,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
+  background-color: #f5f5f5;
   margin-top:50px;
   padding-top:20px;
   padding-bottom:20px;
@@ -35,6 +36,37 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+#myCarousel  .item {
+  height: 600px;
+  background-color:#bbb;
+}
+#myCarousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 600px;
+}
+
 
 #wrap > .container {
   padding: 60px 15px 0;
@@ -51,40 +83,29 @@ body {
   color:#efefef;
 }
 
-h1,h2,h3,h4 {
-  font-family: 'Kreon', serif;
-  vertical-align:middle;
-}
-
 header {
-  background: #5cb85c;
-  height:550px;
-  color:#000000;
-}
-
-header h1,header h2,header h3 a,header a,header a:hover {
-  color:#101010;
-  font-weight:800;
-  text-decoration:none;
-}
-
-header h3 {
-  font-family: 'Kreon', serif;
-  background: #df691a;
-  padding:10px;
-  border-radius:3px;
-  font-size:34px;
-  padding:12px 10px 6px 10px;
+  background: #333;
+  color:#555;
 }
 
 header .dropdown-menu {
   top:74px;
-  background: #df691a;
+  background: #ffcc33;
   border-width:0;
 }
 
 h1 {
   font-size:50px;
+}
+
+.logo {
+  font-size:40px;
+  position:absolute;
+  z-index:1200;
+  color:#333;
+  top:70px;
+  text-align:center;
+  width:100%;
 }
 
 #nav {
@@ -109,6 +130,7 @@ h1 {
       float:none;
   }
 }
+  
 .navbar-nav {
   margin: 1px 1px; 
 }  
@@ -123,11 +145,11 @@ h1 {
 .navbar-custom  .navbar-nav>li>a {
 	color: #ddd;
 }
+.navbar-custom  .dropdown-menu li>a:hover {
+	color: #eee;
+}
 .navbar-custom  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-custom .navbar-nav .active a  {
 	background-color: #000;
-}
-.navbar-custom .dropdown-menu{
-	right:0;
 }
 .navbar-custom .navbar-nav>.dropdown>a .caret {
 	border-top-color: #999;
@@ -143,7 +165,7 @@ h1 {
 }
 
 .divider {
-	height:100px;
+	height:50px;
 }
 
 .panel {
@@ -152,7 +174,7 @@ h1 {
 
 @media (max-width: 768px) {
 	header {
-		height: 95px;
+	
 	}
 }
 
@@ -168,7 +190,7 @@ h1 {
    bottom:0;
    right:6%;
    z-index:100;
-   background: #df691a;
+   background: #f2f3f2;
    font-size:24px;
    border-top-left-radius:3px;
    border-top-right-radius:3px;
@@ -186,25 +208,8 @@ section {
   padding-top:100px;
 }
 
-.bg-cover {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
 .bg-1 {
-    background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-.bg-1 {
-	background: url('http://www.bootply.com/assets/example/bg_4.jpg') no-repeat center center fixed; 
+	background: url('http://www.bootply.com/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -212,7 +217,7 @@ section {
 }
 
 .bg-2 {
-	background: url('http://www.bootply.com/assets/example/bg_5.jpg') no-repeat center center fixed; 
+	background: url('http://www.bootply.com/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -220,7 +225,7 @@ section {
 }
 
 .bg-3 {
-	background: url('http://www.bootply.com/assets/example/bg_6.jpg') no-repeat center center fixed; 
+	background: url('http://www.bootply.com/assets/example/bg_blueplane.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -229,5 +234,10 @@ section {
 
 .bg-4 {
 	padding-top:30px;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20,20,20,0.2)),to(rgba(255,255,255,0)), color-stop(1,#000));
+    background-color:#e6e6e6;
+}
+
+.panel .img-responsive {
+	min-height:270px;
+    max-height:270px;
 }

@@ -1,0 +1,15 @@
+nike:
+    name: Nike
+    background: img/bg_6.jpg
+    section:
+        title: Nike Shoes
+        leadtext: Twitter Bootstrap is a front-end toolkit to rapidly build web applications.
+        body: >
+            Bootstrap is a framework that uses some of the latest browser techniques to provide you with stylish typography, navigation, buttons, tables, etc. One of the primary changes in Bootstrap 3 is an emphasis on Mobile-First responsive design. The goal is to elevate the mobile experience to a first-class citizen of the design process, because several billion mobile users is quite a large market to tap into. So, sites built with the current Bootstrap version target mobile devices and scale for larger screens depending on screen size.
+wing_tip:
+    active: true
+    name: Wing Tip 
+    background: img/test.jpg
+herp_derp:
+    name: Herp Derp 
+    background: img/bg_4.jpg 
