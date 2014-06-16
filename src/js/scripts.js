@@ -21,6 +21,16 @@ $('.scroll-top').click(function() {
     }, 1000);
 })
 
+
+/* smooth scrolling for carousel sections */
+$('#myCarousel > div.carousel-inner > div.item > div > div > h2 > a').click(function() {
+    var link = $(this).attr('href');
+    var posi = $(link).offset().top;
+    $('body,html').animate({
+        scrollTop: posi
+    }, 700);
+});
+
 /* smooth scrolling for nav sections */
 $('#nav .navbar-nav li>a').click(function() {
     var link = $(this).attr('href');
