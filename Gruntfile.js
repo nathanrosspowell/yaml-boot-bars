@@ -108,12 +108,12 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         prettify: {
             ybb: {
-                options: {
-                    json: ['temp/built.json']
-                },
-                files: {
-                    'build/**/*.html': 'build/**/*.html'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'build/',
+                    src: ['**/*.html'],
+                    dest: 'build/'
+                }]
             }
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

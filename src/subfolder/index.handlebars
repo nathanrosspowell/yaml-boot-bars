@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta name="description" content="">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>{{project.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/boilerplate.css">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Wrap all page content here -->
+        <div id="wrap">
+            <header class="masthead">
+                <!-- Carousel -->
+                <div id="myCarousel" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        {{#each products}}
+                        <li data-target="#myCarousel" data-slide-to="{{@index}}" {{#if active }} class="active" {{/if}}>
+                        </li>
+                        {{/each}}
+                    </ol>
+                    <div class="carousel-inner">
+                        {{#each products}}
+                        <div {{#if active }} class="item active" {{else}} class="item" {{/if}}>
+                            <img src="{{carousel}}">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h2>
+                                        <a href="#{{@key}}">
+                                            <p class="text-secondary">{{name}}</p>
+                                        </a>
+                                    </h2>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- /.carousel-inner -->
+                    <div class="logo">
+                        <p class="text-primary">{{project.name}}</p>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                <!-- /.carousel -->
+            </header>
+            <!-- Fixed navbar -->
+            <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav nav-justified">
+                            {{#each products}}
+                            <li {{#if active}}class="active" {{/if}}>
+                                <a href="#{{@key}}">
+                                    <strong>{{name}}</strong>
+                                </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container -->
+            </div>
+            <!--/.navbar -->
+            <div id="sections">
+                {{#each products}}
+                <div class="divider" id="{{@key}}"></div>
+                <section style="
+            background: url('{{background}}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;">
+                    <div class="col-sm-6 col-sm-offset-3 text-center">
+                        <h2 style="padding:20px;background-color:rgba(5,5,5,.8)">{{name}}</h2>
+                    </div>
+                </section>
+                {{#if section }} {{#with section}}
+                <div class="container">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="page-header text-center">
+                            <h1>{{title}}</h1>
+                        </div>
+                        {{#if leadtext }}
+                        <p class="lead text-center">
+                            {{leadtext }}
+                        </p>
+                        {{/if}}
+                        <p class="text-center">
+                            {{body}}
+                        </p>
+                    </div>
+                </div>
+                {{/with}} {{/if}}
+                <div class="divider"></div>
+                {{/each}}
+            </div>
+            <ul class="nav pull-right scroll-top">
+                <li>
+                    <a href="#" title="Scroll to top">
+                        <i class="glyphicon glyphicon-chevron-up"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- script references -->
+            <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+            <script>
+            window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
+            </script>
+            <script src="js/handlebars-v1.3.0.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/scripts.js"></script>
+            <script src="js/main.js"></script>
+            {{#if project.googleanalytics }}
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+            <!--script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','{{project.googleanalytics }}');ga('send','pageview');
+            </script-->
+            {{/if}}
+    </body>
+</html>
